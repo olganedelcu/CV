@@ -10,7 +10,7 @@ export default function CV() {
 
   useEffect(() => {
     getCandidateInformation()
-      .then((response: any) => {
+      .then((response: CandidateModel) => {
         console.log(response);
         setCandidate(response);
         setIsLoading(false);
