@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
-export default function technicalTooling (props: Props) {
+export default function technicalTooling(props: Props) {
   return (
-       <div>
-          <h2>Technical Tooling</h2>
-          <ul>
-              {props.tools.map((tool, index) => (
-                  <li key={index}>{tool}</li>
-              ))}
-          </ul>
-      </div>
-  )
+    <div>
+      <h2>Technical Tooling</h2>
+      <ul>
+        {props.tools.map((tool, index) => (
+          <li key={index}>{tool}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 interface Props {
-    tools: string[]
+  tools: string[];
 }
