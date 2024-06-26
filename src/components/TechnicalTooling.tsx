@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function technicalTooling(props: Props) {
+export default function TechnicalTooling(props: Props) {
   return (
     <div>
       <h2>Technical Tooling</h2>

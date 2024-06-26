@@ -1,7 +1,7 @@
 import React from "react";
 import { Project } from "../models/CandidateModel";
 
-export default function sideProjects(props: Props) {
+export default function SideProjects(props: Props) {
   return (
     <div>
       <h2>Side Projects</h2>
