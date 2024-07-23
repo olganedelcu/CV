@@ -1,11 +1,15 @@
 import React from "react";
-import { Education } from "../models/CandidateModel";
+import { Education } from "../models/EducationModel";
 
-export default function CandidateEducation(props: Props) {
+interface Props {
+    education: Education[];
+}
+
+export default function CandidateEducation({ education }: Props) {
     return (
         <div>
             <h2>Education and Certifications</h2>
-            {props.education.map((edu, index) => (
+            {education.map((edu, index) => (
                 <div key={index}>
                     <h3>{edu.degree}</h3>
                     <p>
@@ -18,8 +22,4 @@ export default function CandidateEducation(props: Props) {
             ))}
         </div>
     );
-}
-
-interface Props {
-    education: Education[];
 }

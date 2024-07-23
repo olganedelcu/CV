@@ -1,38 +1,20 @@
-export interface WorkExperienceModel {
-  position: string;
-  company: string;
-  link?: string;
-  location: string;
-  start_date: string;
-  end_date: string;
-  responsibilities: string[];
-}
-
-export interface Education {
-  degree: string;
-  institution: string;
-  location: string;
-  start_date: string;
-  end_date: string;
-}
-
-export interface Project {
-  project_name: string;
-  description: string;
-}
-
+import {TechnicalTooling} from "./TechnicalTooling"
+import {WorkExperienceModel} from "./WorkExperienceModel";
+import {Education} from "./EducationModel";
+import {SideProject} from "./SideProjects";
+import {LanguageProficiency} from "./LanguageProficiency";
 export interface CandidateModel {
   name: string;
   location: string;
   email: string;
   phone: string;
-  visa_status: string;
   linkedIn: string;
   github: string;
   website: string;
   picture: string;
-  technical_tooling: string[];
+  technical_tooling: TechnicalTooling;
   work_experience?: WorkExperienceModel[];
   education_and_certifications?: Education[];
-  side_projects?: Project[];
+  side_projects?: SideProject[];
+  languages?: LanguageProficiency[];
 }

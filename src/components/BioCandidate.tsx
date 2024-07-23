@@ -1,30 +1,28 @@
 import React from "react";
-
-export default function BioCandidate(props: Props) {
-  return (
-    <div>
-      <img src={props.picture} alt="" />
-      <h1>{props.name}</h1>
-      <p>{props.location}</p>
-      <p>{props.email}</p>
-      <p>{props.phone}</p>
-      <p>Visa Status: {props.visaStatus}</p>
-      <p>
-        <a href={props.linkedIn}>LinkedIn</a> |{" "}
-        <a href={props.github}>GitHub</a> | <a href={props.website}>Website</a>
-      </p>
-    </div>
-  );
-}
+import { CandidateModel } from "../models/CandidateModel";
+import { Container, ProfileImage, CandidateInfo, LinkContainer, Link } from "../styles/CandidateBio.styled";
 
 interface Props {
-  name: string;
-  location: string;
-  email: string;
-  phone: string;
-  visaStatus: string;
-  linkedIn: string;
-  github: string;
-  website: string;
-  picture: string;
+    candidate: CandidateModel;
+}
+
+export default function BioCandidate({ candidate }: Props) {
+    const { picture, name, location, email, phone, linkedIn, github, website } = candidate;
+
+    return (
+        <Container>
+            <ProfileImage src={picture} alt={`${name}'s profile`} />
+            <CandidateInfo>
+                <h1>{name}</h1>
+                <p>{location}</p>
+                <p>{email}</p>
+                <p>{phone}</p>
+                <LinkContainer>
+                    <Link href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</Link>
+                    <Link href={github} target="_blank" rel="noopener noreferrer">GitHub</Link>
+                    <Link href={website} target="_blank" rel="noopener noreferrer">Website</Link>
+                </LinkContainer>
+            </CandidateInfo>
+        </Container>
+    );
 }
