@@ -9,7 +9,7 @@ interface Theme {
 }
 
 export const lightTheme: Theme = {
-    background: 'linear-gradient(135deg, rgba(217, 102, 255, 0.8) 0%, rgba(150, 80, 255, 0.8) 100%)',
+    background: 'linear-gradient(135deg, rgba(217, 102, 255, 0.8) 10%, rgba(150, 80, 255, 0.8) 80%)',
     color: '#1c32a8',
     linkColor: 'rgb(217, 102, 255)',
     buttonBackground: 'rgb(217, 102, 255)',
@@ -19,7 +19,7 @@ export const lightTheme: Theme = {
 };
 
 export const darkTheme: Theme = {
-    background: 'linear-gradient(135deg, rgba(217, 102, 255, 0.8) 0%, rgba(150, 80, 255, 0.8) 100%)',
+    background: 'linear-gradient(135deg, rgba(217, 102, 255, 0.8) 10%, rgba(150, 80, 255, 0.8) 80%)',
     color: '#e0e0e0',
     linkColor: 'rgb(217, 102, 255)',
     buttonBackground: '#6a1b9a',

@@ -1,21 +1,23 @@
 import React from "react";
 import { Project } from "../models/ProjectModel";
-import '../styles/SideProjects.style';
+import { Container, Title, ProjectTitle, ProjectDescription } from '../styles/SideProjects.style';
 
 interface Props {
     projects: Project[];
 }
 
-export default function SideProjects({ projects }: Props) {
+const SideProjects: React.FC<Props> = ({ projects }) => {
     return (
-        <div className="side-projects-container">
-            <h2>Side Projects</h2>
+        <Container>
+            <Title>Side Projects</Title>
             {projects.map((project, index) => (
                 <div key={index}>
-                    <h3>{project.project_name}</h3>
-                    <p>{project.description}</p>
+                    <ProjectTitle>{project.project_name}</ProjectTitle>
+                    <ProjectDescription>{project.description}</ProjectDescription>
                 </div>
             ))}
-        </div>
+        </Container>
     );
-}
+};
+
+export default SideProjects;

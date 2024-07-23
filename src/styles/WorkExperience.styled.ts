@@ -4,6 +4,7 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.background};
   border-radius: 8px;
   padding: 20px;
+  margin-top: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 `;
@@ -29,26 +30,24 @@ export const JobDetails = styled.p`
 `;
 
 export const ResponsibilitiesList = styled.ul`
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none; 
   padding: 0;
   margin: 0;
-  line-height: 1.6; /* Improve readability */
-  color: #000; /* Set color to black */
+  line-height: 1.6;
 `;
 
 export const ListItem = styled.li`
-  margin-bottom: 8px; /* Space between items */
-  background-color: #ffffff; /* White background */
-  color: ${(props) => props.theme.textColor}; /* Text color from theme */
-  padding: 10px 15px; /* Padding for items */
-  border-radius: 8px; /* Rounded corners */
-  border: 2px solid ${(props) => props.theme.textColor}; /* Border color */
+  margin-bottom: 8px; 
+  background-color: #ffffff; 
+  color: ${(props) => props.theme.textColor}; 
+  padding: 10px 15px; 
+  border-radius: 8px; 
   font-size: 1em; /* Font size for items */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effects */
+  transition: background-color 0.3s, transform 0.3s; 
 
   &:hover {
-    background-color: ${(props) => props.theme.textColor}; /* Darker background on hover */
-    color: ${(props) => props.theme.backgroundColor}; /* Change text color for contrast */
-    transform: scale(1.02); /* Slight scale effect */
+    background-color: ${(props) => props.theme.textColor}; 
+    color: ${(props) => props.theme.backgroundColor}; 
+    transform: scale(1.02); 
   }
 `;

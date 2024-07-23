@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   padding: 20px;
+  align-items: center;
   background: linear-gradient(135deg, rgba(217, 102, 255, 0.8) 0%, rgba(150, 80, 255, 0.8) 100%);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -13,7 +13,8 @@ export const ProfileImage = styled.img`
   width: 20%;
   height: 20%;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 190px;
+  margin-left: 80px;
 `;
 
 export const CandidateInfo = styled.div`
